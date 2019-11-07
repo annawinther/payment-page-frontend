@@ -1,7 +1,7 @@
 import React from 'react';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import Navbar from './components/Navbar';
+// import Login from './components/Login';
+// import Signup from './components/Signup';
+// import Navbar from './components/Navbar';
 import './App.css';
 import Counter from './components/Counter';
 
