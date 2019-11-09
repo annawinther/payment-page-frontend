@@ -1,0 +1,23 @@
+{
+  "name": "paymentpage",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test",
+    "mock:api": "json-server --watch api/db.json --port 4000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annawinther/payment-page-frontend.git"
+  },
+  "author": "Anna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annawinther/payment-page-frontend/issues"
+  },
+  "homepage": "https://github.com/annawinther/payment-page-frontend#readme",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}
