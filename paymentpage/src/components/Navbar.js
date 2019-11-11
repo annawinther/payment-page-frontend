@@ -5,10 +5,10 @@ function Navbar () {
     return (
         <div>
             <nav>
-                <Link to="#">Home</Link>
-                <Link to="#">Dash</Link>
-                <Link to="/login">Login</Link>
-                <Link to="/signup">Signup</Link>
+                <Link to="/">Home</Link>
+                <Link to="/">Dash</Link>
+                <Link to="./login">Login</Link>
+                <Link to="./signup">Signup</Link>
             </nav>
         </div>
     )

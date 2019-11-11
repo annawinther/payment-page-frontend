@@ -3,7 +3,7 @@ import React from 'react';
 function Signup () {
     return (
             <div>
-                <h3>Log In Here</h3>
+                <h1>Signup Here</h1>
                 <div>First Name <input type="text" /></div>
                 <div>Last Name <input type="text" /></div>
                 <div>Email <input type="text" /></div>
