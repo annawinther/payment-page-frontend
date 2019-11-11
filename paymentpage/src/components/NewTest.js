@@ -5,16 +5,16 @@ export default class NewTest extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-           firstName: "",
-           lastName: "",
+           fname: "",
+           lname: "",
            email: ""
         }
         this.props = props;
       }
     //   componentWillReceiveProps() {
-    //       console.log(this.props);
+    //       console.log('props', this.props);
     //     this.setState({
-    //       firstName: this.props.data ? this.props.data.event_title : ""
+    //       firstName: this.props.data ? this.props.data.firstName : ""
     //         })
     //     };
     
@@ -24,6 +24,19 @@ export default class NewTest extends React.Component {
         });
       };
 
+    //   onSubmit = () => {
+    //       const data = {
+    //           firstName: this.state.fname,
+    //           lastName: this.state.lname,
+    //           email: this.state.email
+    //       };
+    //       this.props.handleSubmit(data);
+    //       this.setState({
+    //         fname: "",
+    //         lname: "",
+    //         email: ""
+    //       });
+    //   };
 
    render(){
       return (
@@ -45,12 +58,14 @@ export default class NewTest extends React.Component {
                     placeholder="Last Name"
                     />
                     <input
-                    name="title"
+                    name="email"
                     value={this.state.email}
                     onChange={this.handleChange}
-                    type="text"
+                    type="email"
                     placeholder="Email"
                     />
+                    <button>Add</button>
+                    {/* <button onClick={(this.props.handleSubmit())}> Add User!</button> */}
                 </form>
 
             </div>   

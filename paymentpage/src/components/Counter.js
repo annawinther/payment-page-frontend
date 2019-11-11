@@ -29,7 +29,8 @@ class Counter extends React.Component {
         this.setState({ data: this.props.data });
       });
     };
-    async componentDidMount() {
+
+   componentDidMount() {
       this.getData();
     }
 
@@ -50,7 +51,10 @@ class Counter extends React.Component {
             <button onClick={this.increment}>Increment</button>
             <button onClick={this.reset}>Reset</button>
           </div>
-          <NewTest /> 
+          <NewTest 
+            handleSubmit={this.handleSubmit}
+            /> 
+
           <div>
           {this.props.fetchingData ? (
             <h6> fetching data...</h6>
