@@ -1,7 +1,9 @@
 import React from 'react';
 // import axios from 'axios';
+import { connect } from 'react-redux';
+import { getAllData, addNewUser } from '../state/actionsCreators';
 
-export default class NewTest extends React.Component {
+export class NewTest extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -22,21 +24,36 @@ export default class NewTest extends React.Component {
         this.setState({
           [e.target.name]: e.target.value
         });
+        console.log(this.state);
       };
-
-    //   onSubmit = () => {
-    //       const data = {
-    //           firstName: this.state.fname,
-    //           lastName: this.state.lname,
-    //           email: this.state.email
-    //       };
-    //       this.props.handleSubmit(data);
-    //       this.setState({
-    //         fname: "",
-    //         lname: "",
-    //         email: ""
-    //       });
-    //   };
+      // handleSubmit = (data) => {
+      //   // e.preventDefault();
+      //   const url = 'http://localhost:5000/users';
+      //   this.props.addNewUser(url, data).then(res => {
+      //     // debugger;
+      //     console.log('added!!!!')
+      //     // this.getAllData();
+      //   }) 
+      // }
+      handleSubmit = () => {
+        debugger;
+          const data = {
+              firstName: this.state.fname,
+              lastName: this.state.lname,
+              email: this.state.email
+          };
+          // const url = 'http://localhost:5000/users';
+          // this.props.addNewUser(url, data).then(res => {
+          //       debugger;
+          //       console.log('added!!!!')
+          //   //     // this.getAllData();
+          //   }) 
+          // this.setState({
+          //   fname: "",
+          //   lname: "",
+          //   email: ""
+          // });
+      };
 
    render(){
       return (
@@ -44,15 +61,15 @@ export default class NewTest extends React.Component {
                 <form>
                     <h2>Create New User</h2>
                     <input
-                    name="title"
-                    value={this.state.firstName}
+                    name="fname"
+                    value={this.state.fname}
                     onChange={this.handleChange}
                     type="text"
                     placeholder="First Name"
                     />
                     <input
-                    name="title"
-                    value={this.state.lastName}
+                    name="lname"
+                    value={this.state.lname}
                     onChange={this.handleChange}
                     type="text"
                     placeholder="Last Name"
@@ -65,10 +82,27 @@ export default class NewTest extends React.Component {
                     placeholder="Email"
                     />
                     <button>Add</button>
-                    {/* <button onClick={(this.props.handleSubmit())}> Add User!</button> */}
+                    {/* <button onClick={this.handleSubmit()}> Add User!</button> */}
                 </form>
 
             </div>   
         )
     }
 }
+
+const mapStateToProps = state => {
+  console.log(state.data);
+  return {
+      data: state.data,
+      fetchingData: state.fetchingData, 
+      addingUser: state.addingUser
+      // increment: state.countReducerincrement,
+      // decrement: state.decrement,
+      // reset: state.reset,
+  }
+  
+}
+export default connect(
+  mapStateToProps,
+  { getAllData, addNewUser }
+)(NewTest);

@@ -24,7 +24,7 @@ class Counter extends React.Component {
         this.props.reset();
     }
     getData = () => {
-      const url = 'http://localhost:4000/users';
+      const url = 'http://localhost:5000/users';
       this.props.getAllData(url).then(() => {
         this.setState({ data: this.props.data });
       });
@@ -34,12 +34,7 @@ class Counter extends React.Component {
       this.getData();
     }
 
-    handleSubmit = (data) => {
-      const url = 'http://localhost:4000/users';
-      this.props.addNewUser(url, data).then(res => {
-        this.getAllData();
-      }) 
-    }
+  
 
     render() {
       return (
@@ -104,6 +99,7 @@ const mapStateToProps = state => {
         count: state.count,
         data: state.data,
         fetchingData: state.fetchingData, 
+        addingUser: state.addingUser,
         // increment: state.countReducerincrement,
         // decrement: state.decrement,
         // reset: state.reset,
