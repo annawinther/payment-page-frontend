@@ -35,26 +35,34 @@ export class NewTest extends React.Component {
       //     // this.getAllData();
       //   }) 
       // }
-      handleSubmit = () => {
-        debugger;
-          const data = {
-              firstName: this.state.fname,
-              lastName: this.state.lname,
-              email: this.state.email
-          };
-          // const url = 'http://localhost:5000/users';
-          // this.props.addNewUser(url, data).then(res => {
-          //       debugger;
-          //       console.log('added!!!!')
-          //   //     // this.getAllData();
-          //   }) 
-          // this.setState({
-          //   fname: "",
-          //   lname: "",
-          //   email: ""
-          // });
-      };
+    //   handleSubmit = () => {
+    //     // debugger;
+    //     const data = {
+    //       firstName: this.state.fname,
+    //       lastName: this.state.lname,
+    //       email: this.state.email
+    //   };
 
+    //       console.log('data', data);
+    //       // this.props.addNewUser(url, data).then(res => {
+    //         //       // debugger;
+    //         //       console.log('added!!!!')
+    //         //     }); 
+    //         // this.props.getAllData();
+    //         // // this.setState({
+    //           //   fname: "",
+    //           //   lname: "",
+    //           //   email: ""
+    //           // });
+    //         };
+            
+    //  handleAdd = () => {
+    //       // const url = 'http://localhost:5000/users';
+    //       // this.props.addNewUser(url).then(res => {
+    //       //             // debugger;
+    //       //       console.log('added!!!!')
+    //       //     });
+    // }
    render(){
       return (
           <div>
@@ -82,7 +90,7 @@ export class NewTest extends React.Component {
                     placeholder="Email"
                     />
                     <button>Add</button>
-                    {/* <button onClick={this.handleSubmit()}> Add User!</button> */}
+                    {/* <button onClick={}> Add User!</button> */}
                 </form>
 
             </div>   

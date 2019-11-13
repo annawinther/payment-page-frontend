@@ -56,7 +56,7 @@ export const getAllData = url => dispatch =>  {
 
 // test setup, add new user to mock api
 export const addNewUser = (url, data) => dispatch => {
-    dispatch({ type: ADDING_START })
+    dispatch({ type: ADDING_START });
     return axios
     .post(url, data)
     .then(res => {
