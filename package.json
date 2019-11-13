@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "run test",
-    "mock:api": "json-server --watch api/db.json --port 4000"
+    "mock:api": "json-server --watch api/db.json"
   },
   "repository": {
     "type": "git",
