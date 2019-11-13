@@ -17,6 +17,18 @@
       "firstName": "Jeff",
       "lastName": "Bezos",
       "email": "jeff@amazon.com"
+    },
+    {
+      "firstName": "Anna",
+      "lastName": "Winther",
+      "email": "anski.anna@gmail.com",
+      "id": 1938
+    },
+    {
+      "firstName": "Anna",
+      "lastName": "Winther",
+      "email": "anski.anna@gmail.com",
+      "id": 1939
     }
   ],
   "companies": [
