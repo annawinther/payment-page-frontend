@@ -1,3 +1,0 @@
-# payment-page-frontend
-
-test

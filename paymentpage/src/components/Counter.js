@@ -9,7 +9,6 @@ import NewTest from './NewTest';
 class Counter extends React.Component {
   state = {
     data: [],
-    // data: null
   };
 
     increment = () => {
@@ -24,9 +23,10 @@ class Counter extends React.Component {
         this.props.reset();
     }
     getData = () => {
-      const url = 'http://localhost:5000/users';
+      const url = 'http://localhost:2000/api/products';
       this.props.getAllData(url).then(() => {
         this.setState({ data: this.props.data });
+
       });
     };
 
@@ -65,10 +65,14 @@ class Counter extends React.Component {
             return (
                 <Test 
                   key={e.id}
-                  fname={e.firstName}
-                  lname={e.lastName}
-                  email={e.email}
+                  // fname={e.firstName}
+                  // lname={e.lastName}
+                  // email={e.email}
                   // handleSubmit={this.handleSubmit}
+                  name={e.name}
+                  description={e.description}
+                  currency={e.currency}
+                  price={e.price}
                 />
             );
           })}
